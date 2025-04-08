@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Dominion Game Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gradient-to-b from-black via-slate-900 to-gray-900 text-white font-sans">
+
+  <!-- Top Banner -->
+  <div class="bg-slate-800 p-4 text-cyan-400 text-3xl font-bold shadow-md">
+    Solar Dominion: Command Interface
+  </div>
+
+  <!-- Sidebar Toggle -->
+  <div class="p-4">
+    <button 
+      x-data="{ open: false }"
+      x-on:click="open = !open"
+      class="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-4 py-2 rounded-xl"
+    >
+      Toggle Game Menu
+    </button>
+
+    <!-- Sidebar -->
+    <div x-show="open" class="mt-4 p-4 bg-slate-900 border border-cyan-500 rounded-xl shadow-lg space-y-4">
+      <h2 class="text-xl font-bold text-cyan-400">Game Menu</h2>
+      
+      <div>
+        <h3 class="text-cyan-300 font-semibold">Overview</h3>
+      </div>
+      
+      <div>
+        <h3 class="text-cyan-300 font-semibold">Research</h3>
+        <ul class="ml-4 list-disc text-sm text-slate-300 space-y-1">
+          <li>
+            <strong>Infantry Research</strong>
+            <ul class="ml-4 list-disc">
+              <li>Powered Infantry</li>
+              <li>Regular Infantry</li>
+              <li>Robotic Infantry</li>
+              <li>Enhanced Infantry</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-cyan-300 font-semibold">Military</h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
